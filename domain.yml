@@ -1,0 +1,255 @@
+version: "2.0"
+
+intents:
+  #- intent_greeting
+  #- intent_yes
+  #- intent_no
+  #- intent_about_company
+  #- intent_produk
+  #- intent_def_fleksi
+  #- intent_def_multiguna
+  #- intent_keunggulan_fleksi
+  #- intent_syarat_fleksi
+  #- intent_keunggulan_multiguna
+  #- intent_syarat_multiguna
+  #- intent_produk_fleksi_penghasilan
+  #- intent_produk_fleksi_nominal_pinjaman
+  #- intent_produk_multiguna_penghasilan
+  #- intent_produk_multiguna_harga_rumah
+  #- intent_faq
+  #- intent_ask_tarif_pinjaman
+  #- intent_ask_suku_bunga
+  #- intent_simulasi_produk
+  #- intent_pengajuan_pinjaman
+  - intent_greeting
+  - intent_yes
+  - intent_no
+  - intent_about_company
+  - intent_produk
+  - intent_def_fleksi
+  - intent_def_multiguna
+  - intent_keunggulan_fleksi
+  - intent_syarat_fleksi
+  - intent_keunggulan_multiguna
+  - intent_syarat_multiguna
+  - intent_produk_fleksi_penghasilan
+  - intent_produk_fleksi_nominal_pinjaman
+  - intent_produk_multiguna_penghasilan
+  - intent_produk_multiguna_harga_rumah
+  - intent_pengajuan_pinjama
+  - intent_faq
+  - intent_ask_tarif_pinjaman
+  - intent_ask_suku_bunga
+  - intent_pengajuan_pinjaman
+  - intent_simulasi_produk
+  
+actions:
+  #- utter_greeting
+  #- utter_about_company
+  #- utter_produk
+  #- utter_def_fleksi
+  #- utter_keunggulan_fleksi
+  #- utter_syarat_fleksi
+  #- utter_def_multiguna 
+  #- utter_keunggulan_multiguna
+  #- utter_syarat_multiguna
+  #- utter_produk_fleksi_penghasilan
+  #- utter_produk_fleksi_nominal_pinjaman
+  #- utter_produk_multiguna_penghasilan
+  #- utter_produk_multiguna_harga_rumah
+  #- utter_faq
+  #- utter_ask_tarif_pinjaman
+  #- utter_ask_suku_bunga
+  #- utter_simulasi_produk
+  #- utter_pengajuan_pinjaman
+  - utter_greeting
+  - utter_greet_option
+  - utter_greet_menu
+  - utter_about_company
+  - utter_produk
+  - utter_def_fleksi
+  - utter_keunggulan_fleksi
+  - utter_syarat_fleksi
+  - utter_def_multiguna 
+  - utter_keunggulan_multiguna
+  - utter_syarat_multiguna
+  - utter_simulasi_produk
+  - utter_produk_fleksi_penghasilan
+  - utter_produk_fleksi_nominal_pinjaman
+  - utter_produk_multiguna_penghasilan
+  - utter_produk_multiguna_harga_rumah
+  - utter_pengajuan_pinjaman
+  - utter_faq
+  - utter_ask_tarif_pinjaman
+  - utter_ask_suku_bunga
+
+responses:
+  utter_greeting:
+  - text: "Halo Perkenalkan selamat datang di PT Pinjaman, saya adalah Clara, asisten virtual anda"
+
+  utter_greet_option:
+  - text: "Berikut menu yang disajikan
+            1. Perusahaan
+            2. Produk Pinjaman
+            3. Simulasi Pemberian Pinjaman  
+            4. Pengajuan Pinjaman
+            5. FAQ"
+  
+  utter_greet_menu:
+  - text: "Silahkan pilih salah satu menu."
+    buttons:
+    - title: "Perusahaan"
+      payload: /intent_about_company
+    - title: "Produk Pinjaman"
+      payload: /intent_produk
+    - title: "Simulasi Pemberian Pinjaman"
+      payload: /intent_simulasi_produk
+    - title: "Pengajuan Pinjaman"
+      payload: /intent_pengajuan_pinjaman
+    - title: "FAQ"
+      payload: /intent_faq
+  
+  utter_about_company:
+  - text: "PT. Pinjaman merupakan perusahaan keungangan yang bergerak dalam bidang lending atau pemberi pinjaman
+           PT. Pinjaman memiliki 2 buah produk, yaitu pinjaman Fleksi dan Pinjaman Multiguna"
+   
+  utter_produk:
+  - text: "PT Pinjaman memiliki 2 jenis produk, yaitu Pinjaman Fleksi dan Pinjaman Multiguna"
+    buttons:
+    - title: "Produk Fleksi"
+      payload: /intent_def_fleksi
+    - title: "Produk Multiguna"
+      payload: /intent_def_multiguna
+
+  utter_def_fleksi:
+  - text: " Merupakan fasilitas Kredit Tanpa Agunan (KTA) yang diberikan kepada Pegawai Aktif yang mempunyai penghasilan tetap (fixed income), untuk keperluan konsumtif yang tidak bertentangan dengan peraturan maupun Undang-Undang yang berlaku."
+
+  utter_keunggulan_fleksi:
+  - text: "1. Maksimum plafond kredit sampai dengan 500 juta. 
+           2. Maksimum tenor sampai dengan 15 tahun. 
+           3. Tanpa syarat agunan"
+
+  utter_syarat_fleksi:
+  - text: "1. Warga Negara Indonesia
+           2. Merupakan pegawai aktif dengan level minimal staff (pegawai tetap)
+           3. Telah menyalurkan fasilitas pembayaran payroll di BNI.
+           4. Usia minimum 21 tahun dan maximum 65 tahun saat kredit lunas yang dibuktikan dengan Surat Keterangan/Surat Keputusan dari Instansi/Perusahaan yang berwenang.
+           5. Melengkapi form aplikasi dan dokumen yang ditetapkan."
+
+  utter_def_multiguna:
+  - text: "Multiguna adalah Kredit yang diberikan kepada anggota masyarakat dengan agunan berupa properti siap huni dengan kepemilikan agunan atas nama pemohon atau pasangan pemohon (suami/istri) sepanjang tidak ada perjanjian pisah harta."
+
+  utter_keunggulan_multiguna:
+  - text: "1. Jangka waktu hingga 10 tahun.
+           2. Dana dapat digunakan untuk keperluan konsumtif.
+           3. Pengajuan kredit secara online melalui eform BNI Griya"
+
+  utter_syarat_multiguna:
+  - text: "1. Warga Negara Indonesia.
+           2. Usia Minimum 21 tahun saat pengajuan dan usia maksimal saat kredit lunas untuk Karyawan 5 tahun atau usia pensiun dan untuk Professional dan Wiraswasta 65 tahun
+           3. Mengisi formulir dan melengkapi persyaratan dokumen."
+
+
+  utter_simulasi_produk:
+  - text: "simulasi pinjaman yang bisa dicontohkan"
+    buttons:
+    - title: "Simulasi Pinjaman Fleksi"
+      payload: /intent_produk_fleksi_penghasilan
+    - title: "Simulasi Pinjaman Multiguna"
+      payload: /intent_produk_multiguna_penghasilan
+
+  utter_produk_fleksi_penghasilan:
+  - text: "Syaratnya Penghasilan per Bulan dan Jangka Waktu Kredit
+          Simulasinya :
+          Penghasilan Per Bulan : Rp 10.000.000
+          Jangka Waktu Kredit : 12 Bulan 
+          Hasil Simulasi
+          Maksimal Kredit yang bisa didapatkan : Rp. 56.222.089
+          Angsuran Kredit Perbulan : Rp. 5.000.000"
+  
+  utter_produk_fleksi_nominal_pinjaman:
+  - text: "Syaratnya adalah Nominal Pinjaman dan Jangka Waktu Kredit
+           Simulasi Pinjaman
+           Nominal Pinjaman : Rp 10.000.000
+           Jangka Waktu Kredit : 12 Bulan 
+           Hasil Simulasi
+           Maksimal Kredit yang bisa didapatkan : Rp. 10.000.000
+           Angsuran Kredit Perbulan : Rp. 889.330
+           Minimal Penghasilan Bersih Perbulan : 1.778.660"
+
+  utter_produk_multiguna_penghasilan:
+  - text: "Yang bisa dimasukan dalam syarat perhitungan :
+            1. Penghasilan Per Bulan
+            2. Jangka Waktu Kredit (bulan)
+            3. Suku Bunga 
+            Simulasi Pinjaman
+            1.Penghasilan Per Bulan : Rp 10.000.000
+            2. Jangka Waktu Kredit : 12 Bulan
+            3. Suku Bunga : 6.75%
+            *suku bunga dapat berubah sewaktu waktu 
+            Hasil Simulasi
+            Haksimal Kredit yang bisa didapatkan : Rp. 57.862.642
+            Angsuran Kredit Perbulan : Rp. 5.000.000"
+
+  utter_produk_multiguna_harga_rumah:
+  - text: "Yang bisa dihitung dalam simulasi pinjaman ini :
+          1. Nominal Pinjaman
+          2. Jangka Waktu Kredit (bulan)
+          3. Persentase Uang Muka (%)
+          4. Suku Bunga (%)
+          Simulasi Pinjaman
+          1. Nominal Pinjaman : Rp 500.000.000
+          2. Jangka Waktu Kredit : 60 bulan
+          3. Persentasi uang muka 5%
+          4. Suku Bunga 6.75% 
+          Hasil Simulasi
+          Maksimal Kredit yang bisa didapatkan : Rp. 475.000.000
+          Angsuran Kredit Perbulan : Rp. 9.349.643
+          Minimal Penghasilan Bersih Perbulan : Rp. 18.699.286"
+
+
+  utter_pengajuan_pinjaman:
+  - text: " 1. Mengisi Eform BNI
+            2. Nasabah telah mendapatkan penawaran Kredit BNI Fleksi melalui SMS Banking dari 3346 yang berisikan pula No. Referensi.
+            3. Pada website BNI eForm, klik tombol daftar pada penawaran BNI Fleksi .
+            4. Lihat Panduan, Persyaratan dan Ketentuan Umum Pengajuan Kredit BNI Fleksi :
+               Panduan untuk melihat tahap atau cara pengajuan Kredit melalui eForm
+               Kemudian baca Persyaratan dan Ketentuan Umum untuk pengajuan, jika menyetujui atas persyaratan dan ketentuan umum tersebut maka centang (tick) Saya telah membaca Panduan Singkat, Persyaratan dan Ketentuan Umum dan Saya menyetujuinya. dan Tekan - tombol Submit untuk proses lebih lanjut.
+            5. Mengisi informasi Nomor Referensi (sesuai SMS penawaran yg diterima), Tanggal Lahir dan Kode Captcha, kemudian tekan tombol Proses.
+               Menentukan salah satu pilihan jangka waktu dan jumlah pinjaman, kemudian tekan tombol Proses.
+            6. Secara otomatis, anda akan menerima SMS dari 3346 berisikan OTP (One Time Password).
+            7. Masukan OTP tersebut pada layar selanjutnya di kotak OTP (One Time Password), kemudian baca informasi rincian penawaran pinjaman BNI Fleksi yang dipilih dan pernyataan yang memberikan hak kuasa dan wewenang kepada Bank. Jika menyetujui, centang (Tick) dua kali dan selanjutnya tekan tombol Proses.
+            8. Anda akan menerima notifikasi persetujuan atas kredit BNI Fleksi yang telah diajukan. Untuk layanan dan penyelesaian pengaduan hubungi BNI Call 1500046."
+
+  utter_faq:
+  - text: "FAQ yang biasa ditanyakan"
+    buttons:
+    - title: "Tarif Pinjaman"
+      payload: /intent_ask_tarif_pinjaman
+    - title: "Suku Bunga"
+      payload: /intent_ask_suku_bunga
+
+  utter_ask_tarif_pinjaman:
+  - text: "Pinjaman Fleksi
+        Biaya
+        Suku Bunga 			:  Mengikuti Program atau ketentuan BNI Fleksi yang berlaku.
+        Maksimum Kredit 		:  Minimum sebesar Rp 5 Juta dan maksimum sebesar Rp 500 Juta.
+        Biaya Administrasi 		:  Mulai dari Rp 150.000,- atau dapat menggunakan biaya program yang berlaku.
+        Biaya Provisi 			: 1% eenmaligh dari maksimum kredit atau dapat menggunakan biaya program yang berlaku.
+        Asuransi Jiwa 		     	:  Debitur wajib ditutup asuransi jiwa selama masa kredit dan premi asuransi dibayarkan oleh debitur.
+          
+          Pinjaman Multiguna
+        Biaya-biaya BNI Griya Multiguna
+        Jenis Biaya				 			:	Nominal Biaya
+        Propisi 								:	1% dari maksimal kredit eenmalig
+        Administrasi 							:	Mulai dari Rp 750.000,- s.d Rp.2.000.000,-
+        Asuransi Jiwa, Asuransi kebakaran 		:	ditentukan kemudian
+        Appraisal dan Notaris 					:	ditentukan kemudian
+        "
+   
+  utter_ask_suku_bunga:
+  - text: "Bergantung pada Program Pinjaman yang diambil"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
